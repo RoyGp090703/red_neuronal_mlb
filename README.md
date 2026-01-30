@@ -1,7 +1,7 @@
 # Predictor de victorias en la MLB - Deep Learning
 
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
-![Estado](https://img.shields.io/badge/Status-V1_Ready_%7C_Expanding-purple)
+![Estado](https://img.shields.io/badge/Status-V1_Listo_%7C_Expandiendo-purple)
 
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?logo=tensorflow&logoColor=white)
 ![Keras](https://img.shields.io/badge/Keras-D00000?logo=keras&logoColor=white)
