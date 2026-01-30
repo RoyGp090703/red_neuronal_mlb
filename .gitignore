@@ -1,0 +1,7 @@
+venv/
+datos/
+__pycache__/
+.DS_Store
+*.csv
+modelos/
+entreno_log.csv
