@@ -2,7 +2,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange?logo=tensorflow)
-![Status](https://img.shields.io/badge/Status-Completed-green)
+![Estado](https://img.shields.io/badge/Estado-Completado_%7C_En_Desarrollo-blue)
 
 Este proyecto implementa una **Red Neuronal** (NN) capaz de predecir el ganador de partidos de la MLB (Major League Baseball) basándose en estadísticas históricas de los equipos.
 
@@ -10,10 +10,10 @@ El modelo analiza métricas ofensivas y defensivas para calcular la probabilidad
 
 ## Arquitectura del Modelo
 El núcleo del proyecto es una red neuronal densa (Feed-Forward) construida con librerías **TensorFlow/Keras**:
-- **Input:** Estadísticas históricas de ambos equipos (Promedio de bateo, ERA, victorias recientes, etc...).
+- **Entrada:** Estadísticas históricas de ambos equipos (Promedio de bateo, ERA, victorias recientes, etc...).
 - **Capas Ocultas:** 6 capas densas con activación `swish` y `BatchNormalization`.
 - **Regularización:** Capas de `Dropout` para prevenir el sobreajuste (overfitting).
-- **Output:** Probabilidad binaria (Sigmoid) indicando si el equipo local gana o no.
+- **Salida:** Probabilidad binaria (`Sigmoid`) indicando si el equipo local gana o no.
 
 ## Estructura del Repositorio
 
