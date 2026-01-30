@@ -16,7 +16,7 @@ Este proyecto implementa una **Red Neuronal** (NN) capaz de predecir el ganador 
 El modelo analiza métricas ofensivas y defensivas para calcular la probabilidad de victoria.
 
 ## Arquitectura del Modelo
-El núcleo del proyecto es una red neuronal densa (Feed-Forward) construida con librerías **TensorFlow/Keras**:
+El núcleo del proyecto es una red neuronal densa, construida con librerías **TensorFlow/Keras**:
 - **Entrada:** Estadísticas históricas de ambos equipos (Promedio de bateo, ERA, victorias recientes, etc...).
 - **Capas Ocultas:** 6 capas densas con activación `swish` y `BatchNormalization`.
 - **Regularización:** Capas de `Dropout` para prevenir el sobreajuste (overfitting).
