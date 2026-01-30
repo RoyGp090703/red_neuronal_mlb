@@ -35,7 +35,7 @@ El núcleo del proyecto es una red neuronal densa, construida con librerías **T
 │   └── predictor.keras         # Primer modelo de red
 ├── notebooks/                  # Carpeta de códigos para graficar resultados
 │   └── resultados.ipynb        # Grafiación de resultados
-├── app.py                      # Interfaz web para interactuar con el modelo
+├── app.py                      # PROXIMAMENTE - Interfaz web para interactuar con el modelo
 ├── entrenamiento.py            # Código de entrenamiento de la red
 └── requerimientos.txt          # Dependencias del proyecto
 ```
