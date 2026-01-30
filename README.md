@@ -2,7 +2,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange?logo=tensorflow)
-![Estado](https://img.shields.io/badge/Estado-Completado_%7C_En_Desarrollo-blue)
+![Estado](https://img.shields.io/badge/Estado-Completado_%7C_En_Desarrollo-purple)
 
 Este proyecto implementa una **Red Neuronal** (NN) capaz de predecir el ganador de partidos de la MLB (Major League Baseball) basándose en estadísticas históricas de los equipos.
 
