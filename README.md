@@ -62,7 +62,7 @@ El archivo `entrenamiento.py` integra diferentes módulos para transformar la ba
 
 3. **Creación del modelo** (`fuente/modelo.py`)
 - Crea la topología de la red densa de 6 capas ocultas más 2 de entrada/salida.
-- Uso de la función de activación `swish` y capas de ``batchNormalization` para estabilizar el gradiente.
+- Uso de la función de activación `swish` y capas de `batchNormalization` para estabilizar el gradiente.
 - Definición del optimizador `adam` y de la función de pérdida ``binaryCrossentropy`.
 - Elección de las métricas de aprendizaje `accuracy`, `precision` y `auc`.
 
@@ -71,7 +71,7 @@ El proceso de entrenamiento no es estático, se controla mediante `callbacks` qu
 - **EarlyStopping:** El entrenamiento se detiene automáticamente si el error en los datos de validación deja de disminuir, optimizando el tiempo de cómputo.
 - **ReduceLROnPlateau:** Ajusta dinámicamente la tasa de aprendizaje si el modelo se estanca, sintonizando los pesos de la red.
 
-## Instalación
+## Instalación y uso de la red
 A continuación se muestran los pasos para poder descargar los archivos y librerías necesarias.
 
 1. **Clonar el repositorio:**
@@ -84,3 +84,12 @@ A continuación se muestran los pasos para poder descargar los archivos y librer
    ```bash
    pip install -r requerimientos.txt
    ```
+
+3. **Ejecución**: Si desea reentrenar la red por gusto o por algún cambio de parámetros, solo tiene que ejecutar el comando:
+   ```bash
+   python entrenamiento.py
+   ```
+## PRÓXIMOS OBJETIVOS (EN DESARROLLO)
+- Creación de una interfaz de usuario para poder hacer predicciones interactivas con la red creada.
+- Adaptación de la red a funciones de activación con hiperparámetros.
+- Complementación en la base de datos inicial con métricas de sabermetría avanzada en el béisbol.
