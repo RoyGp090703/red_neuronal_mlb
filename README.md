@@ -28,7 +28,7 @@ El núcleo del proyecto es una red neuronal densa, construida con librerías **T
 - **Salida:** Probabilidad de victoria del equipo local.
 La red se ve de la siguiente forma:
 <p align="center">
-  <img src="imagenes/redCreada.jpg" alt="Estructura de la red densa creada." width="300">
+  <img src="imagenes/redCreada.jpg" alt="Estructura de la red densa creada." width="500">
 </p>
 
 ## Estructura del repositorio
