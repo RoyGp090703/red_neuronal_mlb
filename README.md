@@ -12,11 +12,11 @@
 ![NumPy](https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-000000?logo=python&logoColor=white)
 
-Este proyecto implementa una **Red Neuronal** (NN) capaz de predecir el ganador de partidos de la MLB (Major League Baseball) basándose en estadísticas históricas de los equipos.
+Este proyecto implementa una **Red Neuronal** (NN) capaz de predecir el ganador de partidos de la MLB (Major League Baseball) basándose en estadísticas históricas de los equipos desde 1911 hasta 2024.
 
 El modelo analiza métricas ofensivas y defensivas para calcular la probabilidad de victoria.
 
-## Arquitectura del Modelo
+## Arquitectura del modelo
 El núcleo del proyecto es una red neuronal densa, construida con librerías **TensorFlow/Keras**:
 - **Entrada:** Estadísticas históricas de ambos equipos (Promedio de bateo, ERA, victorias recientes, etc...).
 - **Capas Ocultas:** 6 capas densas con activación `swish` y `BatchNormalization`.
@@ -27,7 +27,7 @@ La red se ve de la siguiente forma:
   <img src="imagenes/redCreada.jpg" alt="Estructura de la red densa creada" width="300">
 </p>
 
-## Estructura del Repositorio
+## Estructura del repositorio
 ```text
 ├── datos/                      # Carpeta de archivos 
 │   └── teamstats.csv           # Base de datos
@@ -56,8 +56,22 @@ A continuación se muestran los pasos para poder descargar los archivos y librer
    ```bash
    pip install -r requerimientos.txt
    ```
+
+## Flujo de entrenamiento
+El archivo `entrenamiento.py` integra diferentes módulos para transformar la base de datos cruda en un modelo predictivo:
+
+1. **Preprocesamiento e ingeniería de características (`fuente/preprocesamiento.py`)**
+- **Limpia la base de datos y gestiona los valores nulos.**
+- **Transforma las estadísticas en tensores numéricos.**
+- **Normaliza los datos para facilitar la convergencia de la red.**
+
+
+
+
+
 ## Entrenamiento de la red (opcional)
    Si desea re-entrenar la red neuronal o modificó la arquitectura de la misma, es necesario ejecutar el comando:
    ```bash
    python entrenamiento.py
    ```
+   Para garantizar una precisión mínima del 56%, el script
