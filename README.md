@@ -60,7 +60,7 @@ A continuación se muestran los pasos para poder descargar los archivos y librer
 ## Flujo de entrenamiento
 El archivo `entrenamiento.py` integra diferentes módulos para transformar la base de datos cruda en un modelo predictivo:
 
-1. **Preprocesamiento e ingeniería de características (`fuente/preprocesamiento.py`)**
+1. **Preprocesamiento e ingeniería de características**(`fuente/preprocesamiento.py`)
 - **Limpia la base de datos y gestiona los valores nulos.**
 - **Transforma las estadísticas en tensores numéricos.**
 - **Normaliza los datos para facilitar la convergencia de la red.**
