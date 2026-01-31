@@ -23,7 +23,7 @@ El núcleo del proyecto es una red neuronal densa, construida con librerías **T
 - **Regularización:** Capas de `Dropout` para prevenir el sobreajuste (overfitting).
 - **Salida:** Probabilidad binaria (`Sigmoid`) indicando si el equipo local gana o no.
 <p align="center">
-  <img src="redCreada.jpg" alt="Estructura de la red densa creada" width="600">
+  <img src="imagenes/redCreada.jpg" alt="Estructura de la red densa creada" width="600">
 </p>
 ## Estructura del Repositorio
 
