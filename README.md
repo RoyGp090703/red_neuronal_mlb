@@ -12,16 +12,20 @@
 ![NumPy](https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-000000?logo=python&logoColor=white)
 
-Este proyecto implementa una **Red Neuronal** (NN) capaz de predecir el ganador de partidos de la MLB (Major League Baseball) basándose en estadísticas históricas de los equipos desde 1911 hasta 2024.
+Este proyecto implementa una **red neuronal** (NN) capaz de predecir el ganador de partidos de la MLB (Major League Baseball) basándose en estadísticas históricas de los equipos desde 1911 hasta 2024.
 
 El modelo analiza métricas ofensivas y defensivas para calcular la probabilidad de victoria.
 
 ## Arquitectura del modelo
 El núcleo del proyecto es una red neuronal densa, construida con librerías **TensorFlow/Keras**:
-- **Entrada:** Estadísticas históricas de ambos equipos (Promedio de bateo, ERA, victorias recientes, etc...).
-- **Capas Ocultas:** 6 capas densas con activación `swish` y `BatchNormalization`.
-- **Regularización:** Capas de `Dropout` para prevenir el sobreajuste (overfitting).
-- **Salida:** Probabilidad binaria (`Sigmoid`) indicando si el equipo local gana o no.
+- **Entrada:** Estadísticas históricas de ambos equipos (promedio de bateo, ERA, victorias recientes, etc...).
+- **Capas:** 8 capas densas en total, 6 ocultas.
+- **Función de activación:** `Swish` y `sigmoid`
+- **Regularización:** Capas de `Dropout`.
+- **Optimizador:** `Adam` con tasa de aprendizaje inicial de 0.001.
+- **Función de pérdida:** `Binary crossentropy`.
+- **Métricas:** `Accuracy`, `precision` y `auc`.
+- **Salida:** Probabilidad de victoria del equipo local.
 La red se ve de la siguiente forma:
 <p align="center">
   <img src="imagenes/redCreada.jpg" alt="Estructura de la red densa creada" width="300">
@@ -60,10 +64,23 @@ A continuación se muestran los pasos para poder descargar los archivos y librer
 ## Flujo de entrenamiento
 El archivo `entrenamiento.py` integra diferentes módulos para transformar la base de datos cruda en un modelo predictivo:
 
-1. **Preprocesamiento e ingeniería de características**(`fuente/preprocesamiento.py`)
+1. **Preprocesamiento e ingeniería de características** (`fuente/preprocesamiento.py`)
 - **Limpia la base de datos y gestiona los valores nulos.**
 - **Transforma las estadísticas en tensores numéricos.**
-- **Normaliza los datos para facilitar la convergencia de la red.**
+- **Se aplica `StandardScaler`con media 0 y varianza 1 para centrar los datos y facilitar la convergencia de la red.**
+
+2. **Partición de datos** (`fuente/partición.py`)
+- **Gestiona la separación de los datos en conjuntos de entrenamiento, validación y prueba.**
+- **Implementa una lógica que evita la fuga de datos entre temporadas.**
+
+3. **Creación del modelo** (`fuente/modelo.py`)
+- **Crea la topología de la red densa de 6 capas ocultas más 2 de entrada/salida.**
+- **Uso de la función de activación `swish` y capas de ``batchNormalization` para estabilizar el gradiente.**
+- **Definición del optimizador `adam` y de la función de pérdida ``binaryCrossentropy`.**
+- **Elección de las métricas de aprendizaje.**
+
+El proceso de entrenamiento no es estático, se controla mediante `callbacks` que monitorean el rendimiento en tiempo real:
+- ****
 
 
 
