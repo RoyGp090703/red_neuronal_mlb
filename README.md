@@ -12,7 +12,7 @@
 ![NumPy](https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-000000?logo=python&logoColor=white)
 
-Este proyecto implementa una **red neuronal** (NN) capaz de predecir el ganador de partidos de la MLB (Major League Baseball) basándose en estadísticas históricas de los equipos desde 1911 hasta 2024.
+Este proyecto implementa una **red neuronal** (NN) capaz de predecir el ganador de partidos de la MLB (Major League Baseball) basándose en estadísticas históricas de los equipos desde 1911 hasta 2024 con una precisión mínima del 56% (con los parámetros originales de este repositorio).
 
 El modelo analiza métricas ofensivas y defensivas para calcular la probabilidad de victoria.
 
@@ -47,6 +47,30 @@ La red se ve de la siguiente forma:
 ├── entrenamiento.py            # Código de entrenamiento de la red
 └── requerimientos.txt          # Dependencias del proyecto
 ```
+
+## Flujo de entrenamiento
+El archivo `entrenamiento.py` integra diferentes módulos para transformar la base de datos cruda en un modelo predictivo:
+
+1. **Preprocesamiento e ingeniería de características** (`fuente/preprocesamiento.py`)
+- Limpia la base de datos y gestiona los valores nulos.
+- Transforma las estadísticas en tensores numéricos.
+- Se aplica `StandardScaler`con media 0 y varianza 1 para centrar los datos y facilitar la convergencia de la red.
+
+2. **Partición de datos** (`fuente/partición.py`)
+- Gestiona la separación de los datos en conjuntos de entrenamiento, validación y prueba.
+- Implementa una lógica que evita la fuga de datos entre temporadas.
+
+3. **Creación del modelo** (`fuente/modelo.py`)
+- Crea la topología de la red densa de 6 capas ocultas más 2 de entrada/salida.
+- Uso de la función de activación `swish` y capas de ``batchNormalization` para estabilizar el gradiente.
+- Definición del optimizador `adam` y de la función de pérdida ``binaryCrossentropy`.
+- Elección de las métricas de aprendizaje `accuracy`, `precision` y `auc`.
+
+El proceso de entrenamiento no es estático, se controla mediante `callbacks` que monitorean el rendimiento en tiempo real, esto ahorra tiempo y recursos de cómputo. Los `callbacks` utilizados fueron:
+
+- **EarlyStopping:** El entrenamiento se detiene automáticamente si el error en los datos de validación deja de disminuir, optimizando el tiempo de cómputo.
+- **ReduceLROnPlateau:** Ajusta dinámicamente la tasa de aprendizaje si el modelo se estanca, sintonizando los pesos de la red.
+
 ## Instalación
 A continuación se muestran los pasos para poder descargar los archivos y librerías necesarias.
 
@@ -60,35 +84,3 @@ A continuación se muestran los pasos para poder descargar los archivos y librer
    ```bash
    pip install -r requerimientos.txt
    ```
-
-## Flujo de entrenamiento
-El archivo `entrenamiento.py` integra diferentes módulos para transformar la base de datos cruda en un modelo predictivo:
-
-1. **Preprocesamiento e ingeniería de características** (`fuente/preprocesamiento.py`)
-- **Limpia la base de datos y gestiona los valores nulos.**
-- **Transforma las estadísticas en tensores numéricos.**
-- **Se aplica `StandardScaler`con media 0 y varianza 1 para centrar los datos y facilitar la convergencia de la red.**
-
-2. **Partición de datos** (`fuente/partición.py`)
-- **Gestiona la separación de los datos en conjuntos de entrenamiento, validación y prueba.**
-- **Implementa una lógica que evita la fuga de datos entre temporadas.**
-
-3. **Creación del modelo** (`fuente/modelo.py`)
-- **Crea la topología de la red densa de 6 capas ocultas más 2 de entrada/salida.**
-- **Uso de la función de activación `swish` y capas de ``batchNormalization` para estabilizar el gradiente.**
-- **Definición del optimizador `adam` y de la función de pérdida ``binaryCrossentropy`.**
-- **Elección de las métricas de aprendizaje.**
-
-El proceso de entrenamiento no es estático, se controla mediante `callbacks` que monitorean el rendimiento en tiempo real:
-- ****
-
-
-
-
-
-## Entrenamiento de la red (opcional)
-   Si desea re-entrenar la red neuronal o modificó la arquitectura de la misma, es necesario ejecutar el comando:
-   ```bash
-   python entrenamiento.py
-   ```
-   Para garantizar una precisión mínima del 56%, el script
