@@ -93,7 +93,7 @@ A continuación se muestran los pasos para poder descargar los archivos y librer
 ## Resultados
 
    <p align="center">
-  <img src="imagenes/curvas_de_aprendizaje.jpg" alt="Curvas de aprendizaje de la red." width="500">
+  <img src="imagenes/curvas_de_aprendizaje.jpg" alt="Curvas de aprendizaje de la red." width="600">
 </p>
 
 <p align="center">
