@@ -28,7 +28,7 @@ El núcleo del proyecto es una red neuronal densa, construida con librerías **T
 - **Salida:** Probabilidad de victoria del equipo local.
 La red se ve de la siguiente forma:
 <p align="center">
-  <img src="imagenes/redCreada.jpg" alt="Estructura de la red densa creada" width="300">
+  <img src="imagenes/redCreada.jpg" alt="Estructura de la red densa creada." width="300">
 </p>
 
 ## Estructura del repositorio
@@ -89,7 +89,24 @@ A continuación se muestran los pasos para poder descargar los archivos y librer
    ```bash
    python entrenamiento.py
    ```
+
+## Resultados
+
+   <p align="center">
+  <img src="imagenes/curvas_de_aprendizaje.jpg" alt="Curvas de aprendizaje de la red." width="300">
+</p>
+
+<p align="center">
+  <img src="imagenes/aciertos_errores.jpg" alt="Comparación de aciertos contra errores en diferentes escenarios." width="300">
+</p>
+
+
+
+
+
 ## PRÓXIMOS OBJETIVOS (EN DESARROLLO)
 - Creación de una interfaz de usuario para poder hacer predicciones interactivas con la red creada.
 - Adaptación de la red a funciones de activación con hiperparámetros.
 - Complementación en la base de datos inicial con métricas de sabermetría avanzada en el béisbol.
+
+## Contacto
