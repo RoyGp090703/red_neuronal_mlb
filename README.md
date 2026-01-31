@@ -1,4 +1,5 @@
 # Predictor de victorias en la MLB - Deep Learning
+**Desarrollado por: Rodrigo García Peláez**
 
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
 ![Estado](https://img.shields.io/badge/Estado-Funcionando_%7C_Expandiendo...-purple)
@@ -40,9 +41,16 @@ El núcleo del proyecto es una red neuronal densa, construida con librerías **T
 └── requerimientos.txt          # Dependencias del proyecto
 ```
 ## Instalación
-A continuació se muestran los pasos a seguir para poder entrenar y utilizar el modelo de red neuronal localmente
+A continuación se muestran los pasos a seguir para poder entrenar y utilizar el modelo de red neuronal localmente
 
 1. **Clonar el repositorio:**
    ```bash
    git clone [https://github.com/RoyGp090703/red_neuronal_mlb.git](https://github.com/RoyGp090703/red_neuronal_mlb.git)
    cd red_neuronal_mlb
+   ```
+2. **Instalar dependencias:**
+   ```bash
+   pip install -r requerimientos.txt
+   ```
+3. **Entrenamiento de la red (opcional):**
+   Si desea re-entrenar la red neuronal con nuevos datos o si has modificado la arquitectura de la misma, ejecuta los siguientes comandos
