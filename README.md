@@ -93,11 +93,11 @@ A continuación se muestran los pasos para poder descargar los archivos y librer
 ## Resultados
 
    <p align="center">
-  <img src="imagenes/curvas_de_aprendizaje.jpg" alt="Curvas de aprendizaje de la red." width="300">
+  <img src="imagenes/curvas_de_aprendizaje.jpg" alt="Curvas de aprendizaje de la red." width="500">
 </p>
 
 <p align="center">
-  <img src="imagenes/aciertos_errores.jpg" alt="Comparación de aciertos contra errores en diferentes escenarios." width="300">
+  <img src="imagenes/aciertos_errores.jpg" alt="Comparación de aciertos contra errores en diferentes escenarios." width="500">
 </p>
 
 
