@@ -41,7 +41,7 @@ El núcleo del proyecto es una red neuronal densa, construida con librerías **T
 └── requerimientos.txt          # Dependencias del proyecto
 ```
 ## Instalación
-A continuación se muestran los pasos a seguir para poder entrenar y utilizar el modelo de red neuronal localmente
+A continuación se muestran los pasos para poder descargar los archivos y librerías necesarias.
 
 1. **Clonar el repositorio:**
    ```bash
@@ -52,5 +52,5 @@ A continuación se muestran los pasos a seguir para poder entrenar y utilizar el
    ```bash
    pip install -r requerimientos.txt
    ```
-3. **Entrenamiento de la red (opcional):**
+## Entrenamiento de la red (opcional)
    Si desea re-entrenar la red neuronal con nuevos datos o si has modificado la arquitectura de la misma, ejecuta los siguientes comandos
