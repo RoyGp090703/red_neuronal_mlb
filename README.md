@@ -26,8 +26,8 @@ La red se ve de la siguiente forma:
 <p align="center">
   <img src="imagenes/redCreada.jpg" alt="Estructura de la red densa creada" width="300">
 </p>
-## Estructura del Repositorio
 
+## Estructura del Repositorio
 ```text
 ├── datos/                      # Carpeta de archivos 
 │   └── teamstats.csv           # Base de datos
@@ -51,9 +51,13 @@ A continuación se muestran los pasos para poder descargar los archivos y librer
    git clone [https://github.com/RoyGp090703/red_neuronal_mlb.git](https://github.com/RoyGp090703/red_neuronal_mlb.git)
    cd red_neuronal_mlb
    ```
+
 2. **Instalar dependencias:**
    ```bash
    pip install -r requerimientos.txt
    ```
 ## Entrenamiento de la red (opcional)
-   Si desea re-entrenar la red neuronal con nuevos datos o si has modificado la arquitectura de la misma, ejecuta los siguientes comandos
+   Si desea re-entrenar la red neuronal o modificó la arquitectura de la misma, es necesario ejecutar el comando:
+   ```bash
+   python entrenamiento.py
+   ```
