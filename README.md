@@ -106,3 +106,4 @@ A continuación se muestran los pasos para poder descargar los archivos y librer
 - Complementación en la base de datos inicial con métricas de sabermetría avanzada en el béisbol.
 
 ## Contacto
+**Correo:** rodrigo.pelaez09@gmail.com
