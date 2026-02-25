@@ -100,10 +100,6 @@ A continuación se muestran los pasos para poder descargar los archivos y librer
   <img src="imagenes/aciertos_errores.jpg" alt="Comparación de aciertos contra errores en diferentes escenarios." width="500">
 </p>
 
-
-
-
-
 ## PRÓXIMOS OBJETIVOS (EN DESARROLLO)
 - Creación de una interfaz de usuario para poder hacer predicciones interactivas con la red creada.
 - Adaptación de la red a funciones de activación con hiperparámetros.
