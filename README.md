@@ -107,3 +107,4 @@ A continuación se muestran los pasos para poder descargar los archivos y librer
 
 ## Contacto
 **Correo:** rodrigo.pelaez09@gmail.com
+**Correo alternativo:** rodrigogarcipel@gmail.com
