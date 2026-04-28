@@ -1,6 +1,7 @@
 # Predictor de victorias en la MLB - Deep Learning
 **Desarrollado por: Rodrigo García Peláez**
 
+
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
 ![Estado](https://img.shields.io/badge/Estado-Funcionando_%7C_Expandiendo...-purple)
 
